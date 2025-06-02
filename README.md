@@ -1,79 +1,45 @@
 # Appointment_Summmary-_Assignment
-
 🩺 Appointment Summary - Assignment
 📘 Project Overview
-Appointment Summary Assignment is a demo healthcare-focused project designed to track and display appointment summaries between patients and doctors. This project aims to provide a structured and user-friendly way to manage and view appointment details, supporting better medical record management.
+Appointment Summary Assignment is a simple backend project developed using Go (Golang) and SQLite3, designed to manage and summarize appointments between patients and doctors. It allows for efficient creation, tracking, and querying of appointments with associated patient and doctor details.
+
+🛠️ Tech Stack
+Language: Go (Golang)
+
+Database: SQLite3
 
 🚀 Features
-Create and manage Patients, Doctors, and Appointments
+Add and retrieve Patient, Doctor, and Appointment records
 
-View detailed Appointment Summaries including time, date, patient & doctor info
+View appointment summaries with doctor-patient information
 
-Record and update medical notes and prescriptions
+Store and update medical notes and prescriptions
 
-Seamless integration between different objects (Doctor, Patient, Appointment)
+RESTful API endpoints for CRUD operations
 
-Data validation and error handling for reliable performance
+Lightweight and portable SQLite3 database
 
-🛠️ Technologies Used
-Update this section based on your actual tech stack.
-
-Salesforce Platform (Lightning Experience)
-
-Lightning Web Components (LWC)
-
-Apex (for server-side logic)
-
-Experience Cloud (for patient portal) – if applicable
-
-SOQL & SOSL
-
-Flows and Process Builder
-
-Custom Objects and Fields
-
-🧩 Data Model
-This project uses the following custom Salesforce objects:
-
-Patient__c
-
-Name
-
-Age
-
-Contact Info
-
-Doctor__c
-
-Name
-
-Specialization
-
-Availability
-
-Appointment__c
-
-Patient (Lookup to Patient__c)
-
-Doctor (Lookup to Doctor__c)
-
-Appointment Date & Time
-
-Notes
-
-Prescription__c
-
-Associated with Appointment
-
-Medication details
-
-Dosage
-
-🔄 Flows & Automation
-Book Appointment Flow – used to create an appointment
-
-Follow-up Reminder Flow – sends a reminder after a set duration
-
-Auto-create Prescription Record – after appointment completion
-
-
+📂 Project Structure
+plaintext
+Copy
+Edit
+appointment_summary/
+├── main.go
+├── db/
+│   └── database.go        # DB connection and setup
+├── models/
+│   ├── patient.go
+│   ├── doctor.go
+│   └── appointment.go
+├── handlers/
+│   ├── patient_handler.go
+│   ├── doctor_handler.go
+│   └── appointment_handler.go
+├── utils/
+│   └── response.go        # Helper functions
+├── go.mod
+└── README.md
+📦 Setup & Run
+Prerequisites
+Go 1.18+
+SQLite3
